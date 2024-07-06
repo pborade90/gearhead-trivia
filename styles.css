@@ -1,0 +1,268 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    margin: 0px auto;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    background: #CCDBDC;
+    box-sizing: border-box;
+}
+
+.header {
+    margin: 10px;
+    font-weight: 200;
+    font-size: 1.5em;
+    color: #003249;
+}
+
+.header h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.score {
+    font-size: 25px;
+    color: #007EA7;
+    display: none;
+}
+
+.score-percent {
+    font-size: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.quiz-container {
+    margin: 0px;
+    width: 100%;
+    padding-right: 0px;
+    background: #003249;
+    color: #CCDBDC;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+}
+
+.quiz-header {
+    padding: 10px;
+    font-size: 1.4em;
+    position: sticky;
+    top: 100px;
+    background: #003249;
+    color: #CCDBDC;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+.quiz-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+#quiz-form {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.quiz-questions {
+    padding: 10px;
+}
+
+.option-label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    }
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.option-label:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.option-label input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.option-label input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.option-label .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.submit-btn {
+    background-color: #CCDBDC;
+    border: none;
+    border-radius: 8px;
+    color: #003249;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 24px;
+    text-decoration: none;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.submit-btn:hover {
+    transform: scale(1.1);
+}
+
+.footer {
+    margin: 0px auto;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    color: #003249;
+    background: #CCDBDC;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.footer p:first-child {
+    font-size: 18px;
+    margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+    .header {
+        margin: 5px;
+        font-size: 1.3em;
+    }
+
+    .score {
+        font-size: 20px;
+    }
+    
+    .score-percent {
+        font-size: 40px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .quiz-header {
+        font-size: 1.3em;
+    }
+
+    #quiz-form {
+        font-size: 18px;
+    }
+
+    .option-label {
+        font-size: 18px;
+    }
+
+    .checkmark {
+        height: 20px;
+        width: 20px;
+    }
+
+    .option-label .checkmark:after {
+        top: 8px;
+        left: 7px;
+        width: 6px;
+        height: 6px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        margin: 0;
+        font-size: 1.1em;
+    }
+
+    .score {
+        font-size: 16px;
+    }
+    
+    .score-percent {
+        font-size: 32px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .quiz-header {
+        font-size: 1.1em;
+    }
+
+    #quiz-form {
+        font-size: 16px;
+    }
+
+    .option-label {
+        font-size: 16px;
+    }
+
+    .submit-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    
+    .submit-btn:hover {
+        transform: scale(1.05);
+    }
+    
+    .footer {
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+    .footer p:first-child {
+        font-size: 16px;
+    }
+
+    .footer p:last-child {
+        display: none;
+    }
+
+}
